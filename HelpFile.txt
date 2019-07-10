@@ -1,2 +1,46 @@
+---
+----------------------------Java Scanner--------------------
+
+	Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        scan.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        String s = scan.nextLine();
+        
+        
+ scan.skip skips a input which matches the pattern, here the pattern is :-
+
+(\r\n|[\n\r\u2028\u2029\u0085])?
+? matches exactly zero or one of the previous character.
+| Alternative
+[] Matches single character present in
+\r matches a carriage return
+\n newline
+
+\u2028 matches the character with index 2018 base 16(8232 base 10 or 20050 base 8) case sensitive
+
+\u2029 matches the character with index 2029 base 16(8233 base 10 or 20051 base 8) case sensitive
+\u0085 matches the character with index 85 base 16(133 base 10 or 205 base 8) case sensitive
+1st Alternative \r\n
+
+\r matches a carriage return (ASCII 13)
+\n matches a line-feed (newline) character (ASCII 10)
+2nd Alternative [\n\r\u2028\u2029\u0085]
+
+Match a single character present in the list below [\n\r\u2028\u2029\u0085]
+\n matches a line-feed (newline) character (ASCII 10)
+\r matches a carriage return (ASCII 13)
+\u2028 matches the character with index 202816 (823210 or 200508) literally (case sensitive) LINE SEPARATOR
+\u2029 matches the character with index 202916 (823310 or 200518) literally (case sensitive) PARAGRAPH SEPARATOR
+\u0085 matches the character with index 8516 (13310 or 2058) literally (case sensitive) NEXT LINE       
+        
+        
+        
+
+Note: 
+If you use the nextLine() method immediately following 
+the nextInt() method, recall that nextInt() reads integer tokens; 
+because of this, the last newline character for that line of integer
+ input is still queued in the input buffer and the next nextLine()
+  will be reading the remainder of the integer line (which is empty).
 
 -------Basic Git Commands ---------------
