@@ -1,8 +1,20 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.datastructure.basic;
+/* IMPORTANT: Multiple classes and nested static classes are supported */
 
 // uncomment this if you want to read input.
 import java.io.BufferedReader;
-import java.util.StringTokenizer;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
+
+
+// uncomment this if you want to read input.
+import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -35,23 +47,20 @@ class Person
 	
 	
 
-public class TestClassInExam1
+public class TestClass 
 {static int count=0;
    public static void main(String args[] ) throws Exception
-   { Person person = new Person();
+   { Person1 person = new Person1();
    int flag=0;
    
-   BufferedReader input= new BufferedReader(new InputStreamReader(System.in));
-   StringTokenizer tk = new StringTokenizer(input.readLine());
-   // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    //Scanner sc = new Scanner();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     ArrayList arr = new ArrayList();
 
      //Read input from stdin and provide input before running
  	//System.out.println("ENTER  no .of names");
-        int N = Integer.parseInt(tk.nextToken());//no. of names invited
+        int N = Integer.parseInt(br.readLine());//no. of names invited
       //  System.out.println("ENTER Total no .of people");
- 	int Q =Integer.parseInt(tk.nextToken());// total invited people
+ 	int Q =Integer.parseInt(br.readLine());// total invited people
         for (int i = 0; i < Q; i++)
         { 
         	if(Q<N)
@@ -61,19 +70,19 @@ public class TestClassInExam1
         	}
                 int  x;
         //	 System.out.println("want to enter name 1 or age 2 ");
-                 x= Integer.parseInt(input.readLine());
+                 x= Integer.parseInt(br.readLine());
                  switch(x)
                  {
         	 //if(x=='n')
                      case 1:
           //    System.out.println("Enter name");
-                         person.name= input.readLine().toLowerCase();
+                         person.name= br.readLine().toLowerCase();
                          arr.add(person.name);
                      break;
         	 //else if('a')
                      case 2:
-                         System.out.println("Enter age");
-                     person.age=Integer.parseInt(input.readLine());
+            //             System.out.println("Enter age");
+                     person.age=Integer.parseInt(br.readLine());
                       arr.add(person.age);
                      break;
                      default:
@@ -90,10 +99,10 @@ public class TestClassInExam1
  if(flag==1)
    {   System.out.println("Total no. of people are less than names");
    }
-  System.out.println("Enter age and name");
-   int agee=Integer.parseInt(input.readLine());
-   System.out.println("Enter name");
-   String nnaame=input.readLine().toLowerCase();
+  // System.out.println("Enter age and name");
+   int agee=Integer.parseInt(br.readLine());
+   //System.out.println("Enter name");
+   String nnaame=br.readLine().toLowerCase();
  findPerson(agee,nnaame,arr,Q);
 System.out.println(count);
    }

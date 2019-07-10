@@ -1,5 +1,5 @@
 // Find the prime no. between 1 to 100
-package Basic;
+package com.datastructure.basic;
 
 /**
  *

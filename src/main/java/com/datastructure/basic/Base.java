@@ -3,16 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Basic;
+package com.datastructure.basic;
 
 /**
  *
  * @author AVINASH KUMAR
  */
-public class WriteName {
+public class Base
+{
     public static void main(String [] args)
     {
-        double f= Math.max(1,3);
-        System.out.println("\'Avinash\' "+f);
+   new Child();
     }
+    
+}
+class BaseA {
+    public BaseA()
+    {System.out.println("I am Base Class");}
+    
+    
+}
+class Child extends BaseA
+{
+    public Child()
+    {System.out.println("I am Child Class");}
 }

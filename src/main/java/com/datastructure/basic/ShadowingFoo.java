@@ -1,4 +1,4 @@
-package Basic;
+package com.datastructure.basic;
 
 /**
  *

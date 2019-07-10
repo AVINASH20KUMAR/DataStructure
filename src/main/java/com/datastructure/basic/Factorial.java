@@ -1,5 +1,5 @@
 
-package Basic;
+package com.datastructure.basic;
 
 import java.util.Scanner;
 

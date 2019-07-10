@@ -1,5 +1,5 @@
 
-package Top30;
+package com.datastructure.basic;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
